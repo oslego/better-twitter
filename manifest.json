@@ -1,0 +1,22 @@
+{
+	"name": "Better Twitter",
+	"version": "0.0.0",
+	"description": "Makes the Twitter interface better.",
+	"manifest_version": 2,
+	"minimum_chrome_version": "62",
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": [
+				"https://twitter.com/*"
+			],
+			"css": [
+				"content.css"
+			],
+			"js": [
+        "utils.js",
+				"content.js"
+			]
+		}
+	]
+}

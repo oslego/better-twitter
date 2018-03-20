@@ -1,0 +1,24 @@
+/* Hide "Who to follow" box */
+.module.wtf-module {
+	display: none !important;
+}
+
+/* Remove the "Trends for you" box */
+.module.trends {
+	display: none !important;
+}
+
+/* Remove the "Footer" box */
+.module.Footer {
+	display: none !important;
+}
+
+/* Hide tweet likes count */
+.ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation {
+  display: none !important
+}
+
+/* Hide tweet retweets count */
+.ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation {
+  display: none !important
+}
