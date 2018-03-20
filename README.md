@@ -1,6 +1,6 @@
 # Better Twitter
 
-Makes changes to the Twitter website interface:
+Web Extension which makes changes to the Twitter website interface:
 - hide tweets liked by others from timeline
 - hide tweets retweeted by others from timeline
 - hide tweet like and retweet count
