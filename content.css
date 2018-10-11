@@ -25,13 +25,33 @@
   display: none !important
 }
 
+/* Hide number of favorites */
+.ProfileNav-item--favorites {
+	display: none !important;
+}
+
 /* Hide number of followers */
 .ProfileNav-item--followers {
 	display: none !important;
 }
 
+/* Hide number of following */
+.ProfileNav-item--following {
+	display: none !important;
+}
+
 /* Hide number of tweets */
 .ProfileNav-item--tweets {
+	display: none !important;
+}
+
+/* Hide number of tweets */
+.ProfileNav-item--moments {
+	display: none !important;
+}
+
+/* Hide stats about own twitter activity */
+.ProfileSidebar .TweetImpressionsModule {
 	display: none !important;
 }
 
