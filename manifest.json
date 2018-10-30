@@ -3,7 +3,21 @@
 	"version": "0.0.0",
 	"description": "Makes the Twitter interface better.",
 	"manifest_version": 2,
-	"minimum_chrome_version": "62",
+	"options_ui": {
+    "page": "options.html",
+    "open_in_tab": false,
+		"chrome_style": true
+  },
+	"browser_action": {
+    "default_popup": "options.html"
+  },
+	"permissions": [
+    "storage"
+  ],
+	"web_accessible_resources": [
+    "options.js",
+    "prefs.js"
+  ],
 	"content_scripts": [
 		{
 			"run_at": "document_start",
@@ -15,6 +29,7 @@
 			],
 			"js": [
         "utils.js",
+        "prefs.js",
 				"content.js"
 			]
 		}

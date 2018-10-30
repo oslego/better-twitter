@@ -1,66 +1,82 @@
 /* Hide "Who to follow" box */
-.module.wtf-module {
+.bt--nowtf .module.wtf-module {
 	display: none !important;
 }
 
-/* Remove the "Trends for you" box */
-.module.trends {
+/* Hide "Trends for you" box */
+.bt--notrends .module.trends {
 	display: none !important;
 }
 
-/* Remove the "Footer" box */
-.module.Footer {
+/* Hide "Footer" box */
+.bt--nofooter .module.Footer {
 	display: none !important;
 }
 
-/* --------------- PROFILE */
-
-/* Hide tweet likes count */
-.ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation {
-  display: none !important
-}
-
-/* Hide tweet retweets count */
-.ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation {
-  display: none !important
-}
-
-/* Hide number of favorites */
-.ProfileNav-item--favorites {
+/* Hide promoted tweets */
+.bt--nopromoted .has-profile-promoted-tweet,
+.bt--nopromoted .promoted-tweet {
 	display: none !important;
 }
 
-/* Hide number of followers */
-.ProfileNav-item--followers {
+/* Hide tweet reply count */
+.bt--nopopularity .ProfileTweet-action--reply .ProfileTweet-actionCountForPresentation {
 	display: none !important;
 }
 
-/* Hide number of following */
-.ProfileNav-item--following {
+/* Hide tweet retweet count */
+.bt--nopopularity .ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation {
+  display: none !important;
+}
+
+/* Hide tweet favorite count */
+.bt--nopopularity .ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation {
 	display: none !important;
 }
 
-/* Hide number of tweets */
-.ProfileNav-item--tweets {
+/* Hide number of own favorites */
+.bt--noownfavorites.bt--ownprofile .ProfileNav-item--favorites,
+/* Hide number of other people's favorites */
+.bt--nofame:not(.bt--ownprofile) .ProfileNav-item--favorites {
 	display: none !important;
 }
 
-/* Hide number of tweets */
-.ProfileNav-item--moments {
+/* Hide number of own followers */
+.bt--novanity.bt--ownprofile .ProfileNav-item--followers,
+/* Hide number of other people's followers */
+.bt--nofame:not(.bt--ownprofile) .ProfileNav-item--followers {
+	display: none !important;
+}
+
+/* Hide number of own tweets */
+.bt--novanity.bt--ownprofile .ProfileNav-item--tweets,
+/* Hide number of other people's tweets */
+.bt--nofame:not(.bt--ownprofile) .ProfileNav-item--tweets {
+	display: none !important;
+}
+
+/* Hide number of moments */
+.bt--noownmoments .ProfileNav-item--moments {
 	display: none !important;
 }
 
 /* Hide stats about own twitter activity */
-.ProfileSidebar .TweetImpressionsModule {
+.bt--novanity .ProfileSidebar .TweetImpressionsModule {
 	display: none !important;
+}
+
+/* Fix padding when hiding user card with profile stats */
+.bt--nofame .DashboardProfileCard-content,
+.bt--novanity .DashboardProfileCard-content {
+	padding-bottom: 1em;
 }
 
 /* Hide all profile stats from user cards */
-.ProfileCardStats {
+.bt--nofame .ProfileCardStats {
 	display: none !important;
 }
 
-/* Fix padding when hiding user card with own profile stats */
-.DashboardProfileCard-content {
-  padding-bottom: 1em;
+/* Hide retweets which mention the retweeter */
+.bt--nobragging .bt--isbragging {
+	display: none !important;
 }
