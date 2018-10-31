@@ -23,7 +23,12 @@ function markOwnProfile() {
 function toggleBragging() {
   select
     .all('.tweet[data-retweeter]')
-    .filter(el => el.dataset.retweeter == el.dataset.mentions)
+    .filter(el => {
+      const mentions = el.dataset.mentions || "";
+      const rewteeter = el.dataset.retweeter;
+
+      return mentions.split(" ").includes(rewteeter);
+    })
     .map(el => el.classList.toggle('bt--isbragging', userPrefs['bt--nobragging'].value));
 }
 
@@ -40,6 +45,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
   const { userPrefs } = changes;
   if (area === "sync" && userPrefs && userPrefs.newValue) {
     applyPrefs(userPrefs.newValue);
+    toggleBragging();
   }
 });
 

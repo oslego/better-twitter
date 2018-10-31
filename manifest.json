@@ -1,6 +1,6 @@
 {
 	"name": "Better Twitter",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "Hide the things which are not important to you.",
 	"manifest_version": 2,
 	"options_ui": {
