@@ -1,6 +1,6 @@
 {
 	"name": "Better Twitter",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Hide the things which are not important to you.",
 	"manifest_version": 2,
 	"options_ui": {
@@ -8,6 +8,10 @@
     "open_in_tab": false,
 		"chrome_style": true
   },
+	"icons": {
+  	"64": "icon-64.png",
+  	"128": "icon-128.png"
+	},
 	"browser_action": {
     "default_popup": "options.html"
   },
