@@ -3,6 +3,11 @@
 	"version": "1.1.0",
 	"description": "Hide the things which are not important to you.",
 	"manifest_version": 2,
+	"applications": {
+		"gecko": {
+			"id": "{ef32ca60-1728-4011-a585-4de439fe7ba7}"
+		}
+	},
 	"options_ui": {
     "page": "options.html",
     "open_in_tab": false,

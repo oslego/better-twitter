@@ -1,0 +1,23 @@
+{
+  "name": "better-twitter",
+  "version": "0.0.0",
+  "description": "Web Extension for Chrome, Firefox and Microsoft Edge to hide things on Twitter that are not important to you.",
+  "scripts": {
+    "dev": "npx web-ext run --firefox=nightly --start-url twitter.com",
+    "build": "npx web-ext build",
+    "lint": "npx web-ext lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oslego/better-twitter.git"
+  },
+  "author": "Razvan Caliman<razvan.caliman+dev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oslego/better-twitter/issues"
+  },
+  "homepage": "https://github.com/oslego/better-twitter#readme",
+  "devDependencies": {
+    "web-ext": "^2.9.2"
+  }
+}
