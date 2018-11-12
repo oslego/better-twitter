@@ -4,7 +4,7 @@
   "description": "Web Extension for Chrome, Firefox and Microsoft Edge to hide things on Twitter that are not important to you.",
   "scripts": {
     "dev": "npx web-ext run --firefox=nightly --start-url twitter.com",
-    "build": "npx web-ext build",
+    "build": "npx web-ext build --ignore-files package*",
     "lint": "npx web-ext lint"
   },
   "repository": {
