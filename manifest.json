@@ -1,7 +1,7 @@
 {
 	"name": "Better Twitter",
-	"version": "1.1.0",
-	"description": "Hide the things which are not important to you.",
+	"version": "1.1.1",
+	"description": "Hide things on Twitter that are not important to you.",
 	"manifest_version": 2,
 	"applications": {
 		"gecko": {
