@@ -85,8 +85,3 @@ Ancestor CSS selectors would have been very useful here.
 .bt--nofame [href$="/followers"] {
 	display: none !important;
 }
-
-/* Hide retweets which mention the retweeter */
-.bt--nobragging .bt--isbragging {
-	display: none !important;
-}

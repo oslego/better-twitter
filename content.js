@@ -10,25 +10,11 @@ function applyPrefs(prefs = {}) {
   })
 }
 
-// Hide or show retweets which mention the person retweeting.
-function toggleBragging() {
-  select
-    .all('.tweet[data-retweeter]')
-    .filter(el => {
-      const mentions = el.dataset.mentions || "";
-      const rewteeter = el.dataset.retweeter;
-
-      return mentions.split(" ").includes(rewteeter);
-    })
-    .map(el => el.classList.toggle('bt--isbragging', userPrefs['bt--nobragging'].value));
-}
-
 // Get user prefs and apply their class names to the <html> element
 // immediately so the CSS tweaks apply as soon as the DOM is generated.
 // Waiting for "DOMContentLoaded" will cause a flash of unwanted content.
 chrome.storage.sync.get(['userPrefs'], (result) => {
   applyPrefs(result.userPrefs);
-  toggleBragging();
 });
 
 // Re-apply user prefs when they're changed.
@@ -36,13 +22,7 @@ chrome.storage.onChanged.addListener((changes, area) => {
   const { userPrefs } = changes;
   if (area === "sync" && userPrefs && userPrefs.newValue) {
     applyPrefs(userPrefs.newValue);
-    toggleBragging();
   }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  toggleBragging();
-  observeEl('#stream-items-id', toggleBragging);
 });
 
 /*
