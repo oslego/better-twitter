@@ -2,22 +2,23 @@
 
 Web Extension for Chrome, Firefox and Microsoft Edge.
 
-Take control of your experience on Twitter and hide the things which are not important to you.
+Hide stuff that's not important to you on Twitter.com
 
 Toggle these preferences in the extension options page:
 
-- No fame: Hide other people's number of followers, tweets and likes
-- No bragging: Hide retweets which mention the person retweeting
-- No popularity: Hide number of tweet likes, retweets and replies
-- No vanity: Hide number of own followers, tweets and tweet statistics
-- Hide own likes
-- Hide own moments
+- No fame: Hide number of followers and following count
+- No vanity: Hide number of tweet likes, retweets and replies
 - Hide promoted tweets
 - Hide “Trends for you”
 - Hide “Who to follow”
 - Hide website footer
 
-## How to install from source
+## Install from store:
+
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/better-twitter-extension)
+- [Google Chrome](https://chrome.google.com/webstore/detail/better-twitter/illmpnnkeobcgnnjghammeohfjpjoljp)
+
+## Install from source:
 
 ### Google Chrome
 - Clone or download this repository:
@@ -34,3 +35,15 @@ Toggle these preferences in the extension options page:
 Code here is inspired by and uses parts of these projects:
 - [refined-twitter](https://github.com/sindresorhus/refined-twitter)
 - [select-dom](https://www.npmjs.com/package/select-dom)
+
+## Changelog
+
+Version 1.2 (10 August 2019)
+- Added support for new Twitter UI (circa 2019)
+- Removed "No Bragging" feature
+- Removed support for obsolete features in new Twitter UI:
+  - hide own likes count
+  - hide own moments
+  - hide tweet stats summary
+- Renamed "No popularity" setting to "No vanity"
+- Removed ability to differentiate between vanity metrics for own profile vs other profiles. Vanity: all or nothing.
