@@ -10,15 +10,6 @@ function applyPrefs(prefs = {}) {
   })
 }
 
-// Mark <html> element with a class name when viewing own profile page.
-// Used to isolate prefs which can overlap with other profiles, like hide
-// follower and tweet count, but should only apply on own profile page.
-function markOwnProfile() {
-  const link = document.querySelector('.DashUserDropdown-userInfoLink');
-  isOwnProfile = link && link.pathname === window.location.pathname;
-  document.documentElement.classList.toggle('bt--ownprofile', isOwnProfile);
-}
-
 // Hide or show retweets which mention the person retweeting.
 function toggleBragging() {
   select
@@ -50,10 +41,8 @@ chrome.storage.onChanged.addListener((changes, area) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  markOwnProfile();
   toggleBragging();
   observeEl('#stream-items-id', toggleBragging);
-  observeEl('body', markOwnProfile, { attributes: true, childList: false, subtree: false });
 });
 
 /*
