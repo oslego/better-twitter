@@ -2,14 +2,31 @@
 .bt--nowtf .module.wtf-module {
 	display: none !important;
 }
+/*
+Adaptation for the new Twitter interface (circa 2019).
+
+Apply a fake animation on the "Who to Follow" container.
+An "animationstart" event listener in JavaScript (content.js) is triggered
+to mark the matched element's ancestor with the `bt-marker-wtf` class name.
+Ancestor CSS selectors would have been very useful here.
+*/
+.bt--nowtf [aria-label*="who to follow" i] {
+	animation: bt-marker-wtf 0s 1;
+}
+@keyframes bt-marker-wtf { to { outline-color: inherit } }
+.bt--nowtf .bt-marker-wtf {
+	display: none !important;
+}
 
 /* Hide "Trends for you" box */
-.bt--notrends .module.trends {
+.bt--notrends .module.trends,
+.bt--notrends [aria-label*="trending" i] {
 	display: none !important;
 }
 
 /* Hide "Footer" box */
-.bt--nofooter .module.Footer {
+.bt--nofooter .module.Footer,
+.bt--nofooter [aria-label="footer" i] {
 	display: none !important;
 }
 
@@ -20,17 +37,25 @@
 }
 
 /* Hide tweet reply count */
-.bt--nopopularity .ProfileTweet-action--reply .ProfileTweet-actionCountForPresentation {
+.bt--nopopularity .ProfileTweet-action--reply .ProfileTweet-actionCountForPresentation,
+.bt--nopopularity [data-testid="reply"] span {
 	display: none !important;
 }
 
 /* Hide tweet retweet count */
-.bt--nopopularity .ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation {
+.bt--nopopularity .ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation,
+.bt--nopopularity [href$="/retweets"] span,
+.bt--nopopularity [data-testid="retweet"] span,
+.bt--nopopularity [data-testid="unretweet"] span {
   display: none !important;
 }
 
-/* Hide tweet favorite count */
-.bt--nopopularity .ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation {
+/* Hide tweet like count */
+.bt--nopopularity .ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation,
+.bt--nopopularity [data-testid="like"] span,
+.bt--nopopularity [data-testid="unlike"] span,
+/* Hide the likes count on a single tweet page, but not the Likes tab on the user profile page */
+.bt--nopopularity [href$="/likes"]:not([role="tab"]) span {
 	display: none !important;
 }
 
@@ -72,7 +97,9 @@
 }
 
 /* Hide all profile stats from user cards */
-.bt--nofame .ProfileCardStats {
+.bt--nofame .ProfileCardStats,
+.bt--nofame [href$="/following"],
+.bt--nofame [href$="/followers"] {
 	display: none !important;
 }
 

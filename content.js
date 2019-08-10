@@ -55,3 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
   observeEl('#stream-items-id', toggleBragging);
   observeEl('body', markOwnProfile, { attributes: true, childList: false, subtree: false });
 });
+
+/*
+The new Twitter interface (circa 2019) uses auto-generated markup
+with obfuscated class names which are not guaranteed to be stable over time.
+
+In order to remove unwanted parts of the UI when and if they appear,
+we use CSS selectors in the stylesheet (content.css) to identify
+areas of interest (mostly by `aria-label` attribute contents which are
+more likely to be stable over time), then apply a short fake animation to them.
+
+Here in JavaScript we listen for all `animationstart` events, check if they match
+one of the areas of interest (`AnimationEvent.target` points to the element matched
+by the CSS seletor), then take further action against its ancestor node.
+
+This is a convoluted but viable workaround for missing ancestor selectors in CSS.
+*/
+document.addEventListener('animationstart', (e) => {
+  switch (e.animationName) {
+    case "bt-marker-wtf":
+      // Mark the "Who To Follow" container's parent. A CSS rule will match and hide it.
+      e.target.parentNode.classList.add(e.animationName)
+      break;
+  }
+});
