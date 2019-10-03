@@ -12,6 +12,7 @@ Toggle these preferences in the extension options page:
 - Hide “Trends for you”
 - Hide “Who to follow”
 - Hide website footer
+- Hide user profile tooltips
 
 ## Install from store:
 
@@ -37,6 +38,9 @@ Code here is inspired by and uses parts of these projects:
 - [select-dom](https://www.npmjs.com/package/select-dom)
 
 ## Changelog
+
+Version 1.3 (3 October 2019)
+- Added option to hide user profile card tooltips that show when hovering over user names.
 
 Version 1.2 (10 August 2019)
 - Added support for new Twitter UI (circa 2019)
