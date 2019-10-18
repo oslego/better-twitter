@@ -38,6 +38,14 @@ Code here is inspired by and uses parts of these projects:
 
 ## Changelog
 
+Version 1.4 (18 October 2019)
+
+- Removed option to hide user profile card tooltips that show when hovering over user names because it also blocks media previews.
+
+Version 1.3 (3 October 2019)
+
+- Added option to hide user profile card tooltips that show when hovering over user names.
+
 Version 1.2 (10 August 2019)
 - Added support for new Twitter UI (circa 2019)
 - Removed "No Bragging" feature
