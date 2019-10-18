@@ -85,8 +85,3 @@ Ancestor CSS selectors would have been very useful here.
 .bt--nofame [href$="/followers"] {
 	display: none !important;
 }
-
-/* Hide user profile card tooltips  */
-.bt--noprofile-tooltips [data-reactroot] > div > div:nth-last-child(2) {
-	display: none !important;
-}

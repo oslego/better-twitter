@@ -23,8 +23,4 @@ const DEFAULT_PREFS = {
     value: true,
     label: "Hide website footer",
   },
-  "bt--noprofile-tooltips": {
-    value: false,
-    label: "Hide user profile tooltips",
-  },
 }
