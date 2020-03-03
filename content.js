@@ -46,5 +46,9 @@ document.addEventListener('animationstart', (e) => {
       // Mark the "Who To Follow" container's parent. A CSS rule will match and hide it.
       e.target.parentNode.classList.add(e.animationName)
       break;
+    case "bt-marker-nopromoted":
+      // Mark tweet container for the "promoted" SVG icon.
+      e.target.closest('[data-testid="tweet"]').classList.add(e.animationName)
+      break;
   }
 });

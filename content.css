@@ -18,6 +18,28 @@ Ancestor CSS selectors would have been very useful here.
 	display: none !important;
 }
 
+/*
+Adaptation for the new Twitter interface (circa 2019).
+
+Match the SVG icon for promoted tweets and apply a fake animation to it.
+NOTE: The SVG path for the icon may change in the future.
+An "animationstart" event listener in JavaScript (content.js) is triggered
+to mark the matched element's ancestor (tweet container)
+with the `bt-marker-nopromoted` class name.
+*/
+.bt--nopromoted path[d^="M20.75"] {
+	animation: bt-marker-nopromoted 0s 1;
+}
+@keyframes bt-marker-nopromoted { to { outline-color: inherit } }
+
+/* Hide promoted tweets */
+.bt--nopromoted .has-profile-promoted-tweet,
+.bt--nopromoted .promoted-tweet,
+.bt--nopromoted .bt-marker-nopromoted,
+.bt--nopromoted [data-testid="placementTracking"] {
+	display: none !important;
+}
+
 /* Hide "Trends for you" box */
 .bt--notrends .module.trends,
 .bt--notrends [aria-label*="trending" i] {
@@ -27,12 +49,6 @@ Ancestor CSS selectors would have been very useful here.
 /* Hide "Footer" box */
 .bt--nofooter .module.Footer,
 .bt--nofooter [aria-label="footer" i] {
-	display: none !important;
-}
-
-/* Hide promoted tweets */
-.bt--nopromoted .has-profile-promoted-tweet,
-.bt--nopromoted .promoted-tweet {
 	display: none !important;
 }
 
