@@ -35,8 +35,7 @@ with the `bt-marker-nopromoted` class name.
 /* Hide promoted tweets */
 .bt--nopromoted .has-profile-promoted-tweet,
 .bt--nopromoted .promoted-tweet,
-.bt--nopromoted .bt-marker-nopromoted,
-.bt--nopromoted [data-testid="placementTracking"] {
+.bt--nopromoted .bt-marker-nopromoted {
 	display: none !important;
 }
 
