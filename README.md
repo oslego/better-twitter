@@ -37,6 +37,10 @@ Code here is inspired by and uses parts of these projects:
 - [select-dom](https://www.npmjs.com/package/select-dom)
 
 ## Changelog
+Version 1.4.2 (4 March 2020)
+
+- Fixed a bug where video playback was broken when the option to hide promoted tweets was set.
+
 Version 1.4.1 (3 March 2020)
 
 - Fixed a bug where promoted tweets were not hidden when the option was set.
