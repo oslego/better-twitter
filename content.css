@@ -1,20 +1,43 @@
-/* Hide "Who to follow" box */
-.bt--nowtf .module.wtf-module {
-	display: none !important;
-}
 /*
 Adaptation for the new Twitter interface (circa 2019).
 
-Apply a fake animation on the "Who to Follow" container.
+Mark the main timeline container.
+
+Apply a fake animation on the main timeline container.
+An "animationstart" event listener in JavaScript (content.js) is triggered
+to mark the matched element's ancestor with the `bt-marker-timeline` class name.
+*/
+[aria-label^="timeline" i]:not([aria-label*="trending" i]) {
+	animation: bt-marker-timeline 0s 1;
+}
+@keyframes bt-marker-timeline { to { outline-color: inherit } }
+
+/*
+Adaptation for the new Twitter interface (circa 2019).
+
+Apply a fake animation on the "Who to Follow" sidebar container, main timeline recommended accounts, "Who to Follow" heading and "see more" link.
+
 An "animationstart" event listener in JavaScript (content.js) is triggered
 to mark the matched element's ancestor with the `bt-marker-wtf` class name.
 Ancestor CSS selectors would have been very useful here.
 */
-.bt--nowtf [aria-label*="who to follow" i] {
+/* Sidebar: Who to follow container */
+.bt--nowtf [aria-label*="who to follow" i],
+/* Timeline: Accounts recommended to follow */
+.bt--nowtf .bt-marker-timeline [data-testid="UserCell"],
+/* Timeline: "Who to Follow" heading */
+.bt--nowtf .bt-marker-timeline h2,
+/* Timeline: "See more" link */
+.bt--nowtf [href^="/i/connect_people"] {
 	animation: bt-marker-wtf 0s 1;
 }
 @keyframes bt-marker-wtf { to { outline-color: inherit } }
 .bt--nowtf .bt-marker-wtf {
+	display: none !important;
+}
+
+/* Hide "Who to follow" box in old Twitter UI */
+.bt--nowtf .module.wtf-module {
 	display: none !important;
 }
 
