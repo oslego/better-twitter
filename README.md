@@ -37,6 +37,10 @@ Code here is inspired by and uses parts of these projects:
 - [select-dom](https://www.npmjs.com/package/select-dom)
 
 ## Changelog
+Version 1.4.3 (2 June 2020)
+
+- Hide "Who to follow" recommendations when they appear in the main timeline as well as those that appear in the sidebar.
+
 Version 1.4.2 (4 March 2020)
 
 - Fixed a bug where video playback was broken when the option to hide promoted tweets was set.
