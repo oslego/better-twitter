@@ -37,6 +37,10 @@ Code here is inspired by and uses parts of these projects:
 - [select-dom](https://www.npmjs.com/package/select-dom)
 
 ## Changelog
+Version 1.4.4 (3 June 2020)
+
+- Fix a regression introduced in v1.4.3 which caused an endless refresh loop on a user's "Followers" and "Following" timelines when the option to hide "Who to follow" was enabled.
+
 Version 1.4.3 (2 June 2020)
 
 - Hide "Who to follow" recommendations when they appear in the main timeline as well as those that appear in the sidebar.
