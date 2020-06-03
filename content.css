@@ -1,13 +1,15 @@
 /*
 Adaptation for the new Twitter interface (circa 2019).
 
-Mark the main timeline container.
+Mark just the container for main timeline of tweets, ignoring "trending", "followers" and "following" timelines.
 
 Apply a fake animation on the main timeline container.
 An "animationstart" event listener in JavaScript (content.js) is triggered
 to mark the matched element's ancestor with the `bt-marker-timeline` class name.
+
+NOTE: this is language-dependent because it matches by contents of ARIA labels.
 */
-[aria-label^="timeline" i]:not([aria-label*="trending" i]) {
+[aria-label^="timeline" i]:not([aria-label*="trending" i], [aria-label*="following" i], [aria-label*="followers" i]) {
 	animation: bt-marker-timeline 0s 1;
 }
 @keyframes bt-marker-timeline { to { outline-color: inherit } }
@@ -23,7 +25,11 @@ Ancestor CSS selectors would have been very useful here.
 */
 /* Sidebar: Who to follow container */
 .bt--nowtf [aria-label*="who to follow" i],
-/* Timeline: Accounts recommended to follow */
+/* Timeline: Accounts recommended to follow
+  NOTE: data-testid="UserCell" also matches on Followers/Following timelines.
+  If the main tweets timeline isn't marked correctly, this can trigger a refresh
+  loop on other timelines. Bug: https://github.com/oslego/better-twitter/issues/6
+ */
 .bt--nowtf .bt-marker-timeline [data-testid="UserCell"],
 /* Timeline: "Who to Follow" heading */
 .bt--nowtf .bt-marker-timeline h2,
