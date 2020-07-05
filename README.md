@@ -2,13 +2,14 @@
 
 Web Extension for Chrome, Firefox and Microsoft Edge.
 
-Hide stuff that's not important to you on Twitter.com
+Hide what's not important to you on Twitter.com
 
 Toggle these preferences in the extension options page:
 
 - No fame: Hide number of followers and following count
 - No vanity: Hide number of tweet likes, retweets and replies
 - Hide promoted tweets
+- Hide retweets
 - Hide “Trends for you”
 - Hide “Who to follow”
 - Hide website footer
@@ -30,13 +31,17 @@ Toggle these preferences in the extension options page:
 - Click _Load unpacked_
 - Select the cloned repository folder
 
-## Credits
-
-Code here is inspired by and uses parts of these projects:
-- [refined-twitter](https://github.com/sindresorhus/refined-twitter)
-- [select-dom](https://www.npmjs.com/package/select-dom)
 
 ## Changelog
+Version 2.0.0 (5 July 2020)
+
+With this major version bump, support was removed for hiding things in the old Twitter UI (pre-2019).
+If you still need that, please use the [v1.4.4 legacy version](https://github.com/oslego/better-twitter/releases/tag/v1.4.4).
+
+- Removed support for old Twitter UI (pre-2019)
+- Added option to hide retweets (⭐️ New feature)
+- Fixed hiding "Who to follow" recommendations when thy appear in a user's timeline. ([issue #7](https://github.com/oslego/better-twitter/issues/7))
+
 Version 1.4.4 (3 June 2020)
 
 - Fix a regression introduced in v1.4.3 which caused an endless refresh loop on a user's "Followers" and "Following" timelines when the option to hide "Who to follow" was enabled.
