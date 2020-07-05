@@ -11,6 +11,10 @@ const DEFAULT_PREFS = {
     value: true,
     label: "Hide promoted tweets",
   },
+  "bt--noretweets": {
+    value: false,
+    label: "Hide retweets"
+  },
   "bt--notrends": {
     value: true,
     label: "Hide “Trends for you”",

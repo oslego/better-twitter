@@ -45,6 +45,9 @@ document.addEventListener('animationstart', (e) => {
     case "bt-marker-promoted":
     e.target.closest('div:not([class])').setAttribute('bt-promoted', true)
       break;
+    case "bt-marker-retweet":
+    e.target.closest('div:not([class])').setAttribute('bt-retweet', true)
+      break;
     case "bt-marker-wtf-sidebar":
       // Mark the container's parent for the "Who To Follow" in the sidebar.
       e.target.parentNode.classList.add(e.animationName)

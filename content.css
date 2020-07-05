@@ -4,6 +4,11 @@
 	display: none;
 }
 
+/* Hide retweets */
+.bt--noretweets [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-retweet],
+.bt--noretweets [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-retweet] {
+	display: none;
+}
 
 /* Hide "Who to Follow" from users' timelines */
 .bt--nowtf [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-wtf],
@@ -17,6 +22,11 @@
 }
 @keyframes bt-marker-promoted { to { outline-color: inherit } }
 
+/* Find "retweeted" icons, then mark their ancestor <div> as a retweet */
+.bt--noretweets path[d^="M23.615 15.477c-"] {
+	animation: bt-marker-retweet 0s 1;
+}
+@keyframes bt-marker-retweet { to { outline-color: inherit } }
 
 /* Find "Follow" buttons, then mark their ancestor <div> as a who-to-follow prompt */
 .bt--nowtf [data-testid$="-follow"] {
