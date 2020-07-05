@@ -42,17 +42,29 @@ This is a convoluted but viable workaround for missing ancestor selectors in CSS
 */
 document.addEventListener('animationstart', (e) => {
   switch (e.animationName) {
-    case "bt-marker-wtf":
-      // Mark the "Who To Follow" container's parent. A CSS rule will match and hide it.
+    case "bt-marker-promoted":
+    e.target.closest('div:not([class])').setAttribute('bt-promoted', true)
+      break;
+    case "bt-marker-wtf-sidebar":
+      // Mark the container's parent for the "Who To Follow" in the sidebar.
       e.target.parentNode.classList.add(e.animationName)
       break;
-    case "bt-marker-nopromoted":
-      // Mark tweet container for the "promoted" SVG icon.
-      e.target.closest('[data-testid="tweet"]').classList.add(e.animationName)
+    case "bt-marker-wtf":
+      const container = e.target.closest('div:not([class])');
+      container.setAttribute('bt-wtf', true);
+
+      // If found, mark the container for the "Who to Follow" heading
+      const prevContainer = container.previousElementSibling;
+      if (prevContainer.querySelector('h2')) {
+        prevContainer.setAttribute('bt-wtf', true);
+      }
+
+      // If found, mark the container for "show more" link
+      const nextContainer = container.nextElementSibling;
+      if (nextContainer.querySelector('[href^="/i/connect_people"]')) {
+        nextContainer.setAttribute('bt-wtf', true);
+      }
       break;
-    case "bt-marker-timeline":
-      // Mark the main timeline container
-      e.target.classList.add(e.animationName)
-      break;
+
   }
 });
