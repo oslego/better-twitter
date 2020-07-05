@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/oslego/better-twitter#readme",
   "devDependencies": {
-    "web-ext": "^2.9.2"
+    "web-ext": "^4.3.0"
   }
 }
