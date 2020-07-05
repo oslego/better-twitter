@@ -42,11 +42,6 @@ Ancestor CSS selectors would have been very useful here.
 	display: none !important;
 }
 
-/* Hide "Who to follow" box in old Twitter UI */
-.bt--nowtf .module.wtf-module {
-	display: none !important;
-}
-
 /*
 Adaptation for the new Twitter interface (circa 2019).
 
@@ -62,32 +57,26 @@ with the `bt-marker-nopromoted` class name.
 @keyframes bt-marker-nopromoted { to { outline-color: inherit } }
 
 /* Hide promoted tweets */
-.bt--nopromoted .has-profile-promoted-tweet,
-.bt--nopromoted .promoted-tweet,
 .bt--nopromoted .bt-marker-nopromoted {
 	display: none !important;
 }
 
 /* Hide "Trends for you" box */
-.bt--notrends .module.trends,
 .bt--notrends [aria-label*="trending" i] {
 	display: none !important;
 }
 
 /* Hide "Footer" box */
-.bt--nofooter .module.Footer,
 .bt--nofooter [aria-label="footer" i] {
 	display: none !important;
 }
 
 /* Hide tweet reply count */
-.bt--nopopularity .ProfileTweet-action--reply .ProfileTweet-actionCountForPresentation,
 .bt--nopopularity [data-testid="reply"] span {
 	display: none !important;
 }
 
 /* Hide tweet retweet count */
-.bt--nopopularity .ProfileTweet-action--retweet .ProfileTweet-actionCountForPresentation,
 .bt--nopopularity [href$="/retweets"] span,
 .bt--nopopularity [data-testid="retweet"] span,
 .bt--nopopularity [data-testid="unretweet"] span {
@@ -95,7 +84,6 @@ with the `bt-marker-nopromoted` class name.
 }
 
 /* Hide tweet like count */
-.bt--nopopularity .ProfileTweet-action--favorite .ProfileTweet-actionCountForPresentation,
 .bt--nopopularity [data-testid="like"] span,
 .bt--nopopularity [data-testid="unlike"] span,
 /* Hide the likes count on a single tweet page, but not the Likes tab on the user profile page */
@@ -103,28 +91,7 @@ with the `bt-marker-nopromoted` class name.
 	display: none !important;
 }
 
-/* Hide number of other people's favorites */
-.bt--nofame .ProfileNav-item--favorites {
-	display: none !important;
-}
-
-/* Hide number of other people's followers */
-.bt--nofame .ProfileNav-item--followers {
-	display: none !important;
-}
-
-/* Hide number of other people's tweets */
-.bt--nofame .ProfileNav-item--tweets {
-	display: none !important;
-}
-
-/* Fix padding when hiding user card with profile stats */
-.bt--nofame .DashboardProfileCard-content {
-	padding-bottom: 1em;
-}
-
 /* Hide all profile stats from user cards */
-.bt--nofame .ProfileCardStats,
 .bt--nofame [href$="/following"],
 .bt--nofame [href$="/followers"] {
 	display: none !important;
