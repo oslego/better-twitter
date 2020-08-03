@@ -33,7 +33,7 @@ Toggle these preferences in the extension options page:
 
 
 ## Changelog
-Version 2.0.0 (5 July 2020)
+Version 2.0.0 (3 August 2020)
 
 With this major version bump, support was removed for hiding things in the old Twitter UI (pre-2019).
 If you still need that, please use the [v1.4.4 legacy version](https://github.com/oslego/better-twitter/releases/tag/v1.4.4).
