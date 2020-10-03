@@ -33,6 +33,12 @@ Toggle these preferences in the extension options page:
 
 
 ## Changelog
+Version 2.0.2 (3 October 2020)
+- Patch bump to participate in Promoted Add-ons Pilot Program on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/better-twitter-extension)
+
+Version 2.0.1 (4 August 2020)
+- Patch bump to fix broken extension uploaded to [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/better-twitter-extension)
+
 Version 2.0.0 (3 August 2020)
 
 With this major version bump, support was removed for hiding things in the old Twitter UI (pre-2019).
