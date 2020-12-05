@@ -4,6 +4,12 @@
 	display: none;
 }
 
+/* Hide someone else's liked tweets showing in timelines */
+.bt--nolikedtweets [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-likedtweet],
+.bt--nolikedtweets [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-likedtweet] {
+	display: none;
+}
+
 /* Hide retweets */
 .bt--noretweets [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-retweet],
 .bt--noretweets [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-retweet] {
@@ -27,6 +33,18 @@
 	animation: bt-marker-retweet 0s 1;
 }
 @keyframes bt-marker-retweet { to { outline-color: inherit } }
+
+/* Find "liked tweet" icons next to "Someone liked" annotations, then mark their ancestor <div> as a retweet
+	 The  path for "filled heart" is identical to the one used when you yourself like a tweet.
+	 When the icon is used in context of the "Someone liked" annotation,
+	 the host <svg> is an only child of its parent so we can differentiate on that. This is fragile.
+
+	 FIXME: Find a way to match the tweet annotation container for "Someone liked" or "Someone retweeted".
+*/
+.bt--nolikedtweets svg:only-child path[d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"] {
+	animation: bt-marker-likedtweet 0s 1;
+}
+@keyframes bt-marker-likedtweet { to { outline-color: inherit } }
 
 /* Find "Follow" buttons, then mark their ancestor <div> as a who-to-follow prompt */
 .bt--nowtf [data-testid$="-follow"] {

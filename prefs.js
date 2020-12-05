@@ -15,6 +15,10 @@ const DEFAULT_PREFS = {
     value: false,
     label: "Hide retweets"
   },
+  "bt--nolikedtweets": {
+    value: true,
+    label: "Hide tweets liked by others"
+  },
   "bt--notrends": {
     value: true,
     label: "Hide “Trends for you”",

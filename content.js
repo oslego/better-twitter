@@ -42,6 +42,9 @@ This is a convoluted but viable workaround for missing ancestor selectors in CSS
 */
 document.addEventListener('animationstart', (e) => {
   switch (e.animationName) {
+    case "bt-marker-likedtweet":
+    e.target.closest('div:not([class])').setAttribute('bt-likedtweet', true)
+      break;
     case "bt-marker-promoted":
     e.target.closest('div:not([class])').setAttribute('bt-promoted', true)
       break;
