@@ -16,8 +16,10 @@
 	display: none;
 }
 
-/* Hide "Who to Follow" from users' timelines */
-.bt--nowtf [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-wtf],
+/* Hide "Who to Follow" from users' timelines aside from search result timelines
+	 https://github.com/oslego/better-twitter/issues/12
+*/
+.bt--nowtf [aria-label^="timeline" i][aria-label$="timeline" i]:not([aria-label~="search" i]) div[bt-wtf],
 .bt--nowtf [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-wtf] {
 	display: none;
 }
