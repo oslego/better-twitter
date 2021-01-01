@@ -33,7 +33,8 @@
 		{
 			"run_at": "document_start",
 			"matches": [
-				"https://twitter.com/*"
+				"https://twitter.com/*",
+				"https://mobile.twitter.com/*"
 			],
 			"css": [
 				"content.css"
