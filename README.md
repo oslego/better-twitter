@@ -1,15 +1,16 @@
 # Better Twitter
 
-Web Extension for Chrome, Firefox and Microsoft Edge.
+Web Extension for Google Chrome and Firefox.
 
-Hide what's not important to you on Twitter.com
+Hide what's not important for you on Twitter.com
 
 Toggle these preferences in the extension options page:
 
-- No fame: Hide number of followers and following count
-- No vanity: Hide number of tweet likes, retweets and replies
+- **No fame**: Hide number of followers and following count
+- **No vanity**: Hide number of tweet likes, retweets and replies
 - Hide promoted tweets
 - Hide retweets
+- Hide tweets liked by others
 - Hide “Trends for you”
 - Hide “Who to follow”
 - Hide website footer
@@ -33,6 +34,11 @@ Toggle these preferences in the extension options page:
 
 
 ## Changelog
+Version 2.1.0 (1 January 2021)
+- Added option to hide tweets liked by others. (⭐️ New feature)
+- Fixed bug where search results for people are hidden. ([issue #12](https://github.com/oslego/better-twitter/issues/12))
+- Fixed bug where options did not apply on mobile.twitter.com. ([issue #22](https://github.com/oslego/better-twitter/issues/22))
+
 Version 2.0.2 (3 October 2020)
 - Patch bump to participate in Promoted Add-ons Pilot Program on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/better-twitter-extension)
 
