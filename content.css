@@ -69,6 +69,11 @@
 	display: none !important;
 }
 
+/* Hide "Topics to follow" box */
+.bt--notopics [aria-label="Timeline: "] {
+        display: none !important;
+}
+
 /* Hide "Footer" box */
 .bt--nofooter [aria-label="footer" i] {
 	display: none !important;

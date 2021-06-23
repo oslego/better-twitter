@@ -23,6 +23,10 @@ const DEFAULT_PREFS = {
     value: true,
     label: "Hide “Trends for you”",
   },
+  "bt--notopics": {
+    value: true,
+    label: "Hide “Topics to follow”",
+  },
   "bt--nowtf": {
     value: true,
     label: "Hide “Who to follow”",
