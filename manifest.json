@@ -1,49 +1,51 @@
 {
-	"name": "Better Twitter",
-	"version": "2.1.0",
-	"description": "Hide what's not important on Twitter.com",
-	"manifest_version": 2,
-	"applications": {
-		"gecko": {
-			"id": "{ef32ca60-1728-4011-a585-4de439fe7ba7}"
-		}
-	},
-	"options_ui": {
+  "name": "Better Twitter",
+  "version": "2.1.0",
+  "description": "Hide what's not important on Twitter.com",
+  "manifest_version": 3,
+  "options_ui": {
     "page": "options.html",
     "open_in_tab": false,
-		"browser_style": true,
-		"chrome_style": true
+    "browser_style": true
   },
-	"icons": {
-  	"64": "icon-64.png",
-  	"128": "icon-128.png"
-	},
-	"browser_action": {
-		"browser_style": true,
-    "default_popup": "options.html"
+  "icons": {
+    "64": "icon-64.png",
+    "128": "icon-128.png"
   },
-	"permissions": [
+  "permissions": [
     "storage"
   ],
-	"web_accessible_resources": [
-    "options.js",
-    "prefs.js"
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "options.js",
+        "prefs.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ],
-	"content_scripts": [
-		{
-			"run_at": "document_start",
-			"matches": [
-				"https://twitter.com/*",
-				"https://mobile.twitter.com/*"
-			],
-			"css": [
-				"content.css"
-			],
-			"js": [
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [
+        "https://twitter.com/*",
+        "https://mobile.twitter.com/*"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "js": [
         "utils.js",
         "prefs.js",
-				"content.js"
-			]
-		}
-	]
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "browser_style": true,
+    "default_popup": "options.html"
+  },
+  "content_security_policy": {}
 }
