@@ -1,6 +1,5 @@
 /* Hide promoted tweets */
-.bt--nopromoted [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-promoted],
-.bt--nopromoted [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-promoted] {
+.bt--nopromoted div:not(#react-root)[bt-promoted] {
 	display: none;
 }
 
