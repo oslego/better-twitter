@@ -65,7 +65,7 @@
 }
 
 /* Hide "Trends for you" box */
-.bt--notrends [aria-label*="trending" i] {
+.bt--notrends [aria-labelledby="accessible-list-0"] {
 	display: none !important;
 }
 
