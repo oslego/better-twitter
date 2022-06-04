@@ -65,7 +65,7 @@
 }
 
 /* Hide "Trends for you" box */
-.bt--notrends [aria-label*="trending" i] {
+.bt--notrends [aria-label*="timeline: trending now" i] {
 	display: none !important;
 }
 
