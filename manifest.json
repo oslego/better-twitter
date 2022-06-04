@@ -1,6 +1,6 @@
 {
 	"name": "Better Twitter",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Hide what's not important on Twitter.com",
 	"manifest_version": 2,
 	"applications": {

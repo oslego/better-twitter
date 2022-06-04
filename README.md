@@ -34,6 +34,9 @@ Toggle these preferences in the extension options page:
 
 
 ## Changelog
+Version 2.1.1 (4 June 2022)
+- Fixed bug where the option to hide trends hides the entire sidebar. ([issue #49](https://github.com/oslego/better-twitter/issues/49))
+
 Version 2.1.0 (1 January 2021)
 - Added option to hide tweets liked by others. (⭐️ New feature)
 - Fixed bug where search results for people are hidden. ([issue #12](https://github.com/oslego/better-twitter/issues/12))
