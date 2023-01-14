@@ -1,6 +1,6 @@
 /* Hide promoted tweets */
-.bt--nopromoted [aria-label^="timeline" i][aria-label$="timeline" i] div[bt-promoted],
-.bt--nopromoted [aria-label^="timeline" i][aria-label$="tweets" i] div[bt-promoted] {
+.bt--nopromoted div[bt-promoted],
+.bt--nopromoted div[bt-promoted] {
 	display: none;
 }
 
@@ -25,13 +25,13 @@
 }
 
 /* Find "promoted" icons, then mark their ancestor <div> as a promoted tweet */
-.bt--nopromoted path[d^="M20.75"] {
+.bt--nopromoted path[d^="M19.498"] {
 	animation: bt-marker-promoted 0s 1;
 }
 @keyframes bt-marker-promoted { to { outline-color: inherit } }
 
 /* Find "retweeted" icons, then mark their ancestor <div> as a retweet */
-.bt--noretweets path[d^="M23.615 15.477c-"] {
+.bt--noretweets path[d^="M4.75 3.79l4"] {
 	animation: bt-marker-retweet 0s 1;
 }
 @keyframes bt-marker-retweet { to { outline-color: inherit } }
@@ -43,7 +43,7 @@
 
 	 FIXME: Find a way to match the tweet annotation container for "Someone liked" or "Someone retweeted".
 */
-.bt--nolikedtweets svg:only-child path[d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12z"] {
+.bt--nolikedtweets svg:only-child path[d^="M20.884 13.19c-1"] {
 	animation: bt-marker-likedtweet 0s 1;
 }
 @keyframes bt-marker-likedtweet { to { outline-color: inherit } }
