@@ -34,6 +34,9 @@ Toggle these preferences in the extension options page:
 
 
 ## Changelog
+Version 2.1.2 (14 January 2023)
+- Fixed bug where promoted tweets were not hidden on request. ([issue #54](https://github.com/oslego/better-twitter/issues/54))
+
 Version 2.1.1 (4 June 2022)
 - Fixed bug where the option to hide trends hides the entire sidebar. ([issue #49](https://github.com/oslego/better-twitter/issues/49))
 
