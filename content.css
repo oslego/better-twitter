@@ -86,6 +86,11 @@
   display: none !important;
 }
 
+/* Hide tweet quote retweet count */
+.bt--nopopularity [href$="/retweets/with_comments"] span {
+	display: none !important;
+}
+
 /* Hide tweet like count */
 .bt--nopopularity [data-testid="like"] span,
 .bt--nopopularity [data-testid="unlike"] span,
